@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'MasonChronicles';
+  src: url('../fonts/MasonChronicles.woff') format('woff');
+  src: url('../fonts/masonchronicles3.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+	background-color: #141218;
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	color: white;
+}
+.container { /* мы делаем так, чтобы все содержимое сайта было внутри воображаемого контента */
+	max-width: 1140px; /*как в макете, задаем строгие границы */ 
+	margin: auto; /* выравниваем по середине (всегда будет по центру) */
+}
+.header { 
+	display: flex; /* элементы в список */
+	align-items: center; /* позиционируем элементы в список */
+	justify-content: space-between; /* элементы по краям странциы */
+	padding-top: 60px; /* отступы сверху */
+	margin-bottom: 90px; /* мы двигаем от него (все ниже него элементы) на 90 пикселей НЕ ЕГО!! */
+}
+.menu-list {
+	margin-right: auto; /* приклеивание слов к лого */
+	margin-left: 67px; /* в макете есть отступы от картинки , в figma зажимай alt */ 
+}
+.menu-link {
+	font-size: 14px;
+	line-height: 16px;
+	color: #FFFFFF;
+	text-decoration: none;
+	margin-right: 24px; /* отступы для текста */
+	font-family: 'Roboto', sans-serif;
+}
+.social-link {
+	margin-left: 20px; /* отступы для картинок */
+	text-decoration: none;
+}
+.genre {
+	font-size: 14px;
+	line-height: 16px;
+	margin-bottom: 16px;
+	/*margin-bottom: 16px; НЕ СРАБОТАЕТ Т.К SPAN ЯВЛЯЕТСЯ СТРОЧНЫМ if мы добавил display block , то он заработает*/
+	display: block;
+	font-family: 'Roboto', sans-serif;
+}
+.raiting {
+	display: flex; /* элементы в строку */
+	margin-top: 10px; /* двигаем элемент ниже */
+}
+.raiting-number {
+	font-size: 12px;
+	line-height: 14px;
+}
+.main-title {
+	font-family: 'MasonChronicles', arial;
+	font-weight: 500;
+	font-size: 76px;
+	line-height: 89px;
+	margin-bottom: 10px; /* двигаем заголок ввыше */
+}
+.main-description {
+	max-width: 458px; /* задаем строгие границы */
+	font-family: Roboto;
+	font-size: 14px;
+	line-height: 150%; /* высота строки */
+}
+.button {
+	background: #9D2929;
+	border-radius: 8px;
+	color: white;
+	border: none; /* получается сплющенной т.к не хватает внутренних отступов */
+	padding: 22px 72px; /* то есть, 22 сверху и снизу, 72 справа и слева */
+	margin-top: 40px;
+}
+.play {
+	position: relative;
+	left: 30%;
+	width: 100px;
+	height: 100px;
+	background: #9D2929;
+	border: none;
+	border-radius: 50%;
+}
+.play-image {
+	position: relative;
+	transform: translateX(5px); /* выравниваем знак play */
+}
+.play:before {
+	content: '';
+	width: 132px;
+	height: 132px;
+	background: #9D2929;
+	opacity: 0.5;
+	position: absolute;
+	border-radius: 50%;
+	left: -16px;
+	top: -16px;
+}
+.main-content {
+	display: flex;
+	align-items: center;
+}
+.menu-link:hover {
+	border-bottom: 1px solid white;
+}
+
+/* слайдер */
+.card {
+width: 164px;
+height: 113px;
+background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2D2D2D 100%);
+border-radius: 8px;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+padding: 13px;
+}
+.card-subtitles {
+	font-size: 10px;
+	line-height: 12px;
+}
+.card-title {
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+}
